@@ -21,8 +21,8 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 
         auth.inMemoryAuthentication()
             .withUser( users.username( "Liliana" ).password( "MTG247" ).roles( "PLAINSWALKER" ) )
-            .withUser( users.username( "Ugin" ).password( "MTG247" ).roles( "DRAGON" ) )
-            .withUser( users.username( "Suntail Hawk" ).password( "MTG247" ).roles( "CREATURE" ) );
+            .withUser( users.username( "Ugin" ).password( "MTG247" ).roles( "DRAGON", "PLAINSWALKER", "CREATURE" ) )
+            .withUser( users.username( "Suntail Hawk" ).password( "MTG247" ).roles( "CREATURE", "BIRD" ) );
     }
 
     @Override
